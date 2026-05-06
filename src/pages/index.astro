@@ -15,7 +15,7 @@ import FadeIn from "../components/animations/FadeIn.tsx";
 <Layout>
   <Nav client:load />
   <main>
-     <FadeIn direction="right" delay={0.4} client:load>
+    <FadeIn direction="right" delay={0.4} client:load>
       <Hero client:load />
     </FadeIn>
 
@@ -35,4 +35,7 @@ import FadeIn from "../components/animations/FadeIn.tsx";
       <Contact />
     </FadeIn>
   </main>
+  <footer class="text-center py-8 font-mono text-muted text-sm">
+    Designed & Built by <span class="text-accent">Samuel Andhika Prasetyo</span>
+  </footer>
 </Layout>
