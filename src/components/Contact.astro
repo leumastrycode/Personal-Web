@@ -1,0 +1,42 @@
+---
+const email = 'leumastrycode@email.com';
+const socials = [
+  { label: 'GitHub',   href: 'https://github.com/leumastrycode' },
+  { label: 'LinkedIn', href: 'https://linkedin.com/' },
+  { label: 'Instagram',  href: 'https://instagram.com/samuel.andhika' },
+];
+---
+
+<section id="contact" class="px-16 py-24 max-w-2xl mx-auto text-center">
+  <p class="font-mono text-accent text-sm mb-5">04. What's Next?</p>
+
+  <h2 class="font-display font-black text-primary tracking-tight mb-6"
+    style="font-size: clamp(2rem, 5vw, 3.5rem)">
+    Get In Touch
+  </h2>
+
+  <p class="font-body text-muted text-lg leading-relaxed max-w-md mx-auto mb-12">
+    My inbox is always open. Whether you have a question, a project idea,
+    or just want to say hi — I'll get back to you!
+  </p>
+
+  <a
+    href={`mailto:${email}`}
+    class="font-mono text-sm text-accent border border-accent px-10 py-4 rounded inline-block hover:bg-accent/10 transition-colors"
+  >
+    Say Hello ✉
+  </a>
+
+  <div class="flex justify-center gap-10 mt-16 flex-wrap">
+    {socials.map(s => (
+      <a
+        href={s.href}
+        target="_blank"
+        rel="noopener"
+        class="font-mono text-xs text-muted tracking-widest hover:text-accent transition-colors"
+      >
+        {s.label}
+      </a>
+    ))}
+  </div>
+</section>
