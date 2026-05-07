@@ -1,33 +1,31 @@
 ---
 const bio = [
-  `Hey! I'm <span class="text-primary">Samuel Andhika Prasetyo</span>, a frontend developer based in Indonesia who loves crafting beautiful, interactive web experiences.`,
-  `My main focus is building accessible, pixel-perfect UIs with modern tools like <span class="text-accent">React</span>, <span class="text-accent">TypeScript</span>, and <span class="text-accent">Tailwind CSS</span>.`,
+  `Hey! I'm <span class="text-gray-900 dark:text-slate-100 font-medium">Samuel Andhika Prasetyo</span>, a frontend developer based in Indonesia who loves crafting beautiful, interactive web experiences.`,
+  `My main focus is building accessible, pixel-perfect UIs with modern tools like <span class="text-mint font-medium">React</span>, <span class="text-mint font-medium">TypeScript</span>, and <span class="text-mint font-medium">Tailwind CSS</span>.`,
   `When I'm not coding, you'll find me exploring design trends, contributing to open source, or drinking too much coffee ☕`,
 ];
 ---
 
 <section id="about" class="px-16 py-24">
-  <h2 class="font-display font-bold text-primary text-3xl flex items-center gap-4 mb-12">
-    <span class="font-mono text-accent font-normal text-base">01.</span>
+  <h2 class="font-display font-bold text-gray-900 dark:text-slate-100 text-3xl flex items-center gap-4 mb-12">
+    <span class="font-mono text-mint font-normal text-base">01.</span>
     About Me
-    <span class="flex-1 h-px bg-black/10"></span>
+    <span class="flex-1 h-px bg-gray-200 dark:bg-mint/10"></span>
   </h2>
 
   <div class="grid grid-cols-[3fr_2fr] gap-20 items-center max-w-5xl">
     <div class="flex flex-col gap-5">
       {bio.map(p => (
-        <p class="font-body text-muted text-lg leading-relaxed" set:html={p} />
+        <p class="font-body text-gray-500 dark:text-slate-400 text-lg leading-relaxed" set:html={p} />
       ))}
     </div>
 
     <div class="relative w-[260px] h-[300px] mx-auto group">
-      <!-- Avatar box -->
-      <div class="w-full h-full bg-surface border-2 border-accent/20 rounded-lg flex items-center justify-center overflow-hidden">
+      <div class="w-full h-full bg-gray-100 dark:bg-zinc-900 border-2 border-gray-200 dark:border-mint/20 rounded-lg flex items-center justify-center overflow-hidden">
         <!-- 🖼️ Replace with: <img src="/your-photo.jpg" alt="Your Name" class="w-full h-full object-cover" /> -->
-        <span class="font-display font-black text-8xl text-accent/10">YN</span>
+        <span class="font-display font-black text-8xl text-gray-200 dark:text-mint/10">YN</span>
       </div>
-      <!-- Offset border -->
-      <div class="absolute top-3.5 left-3.5 -right-3.5 -bottom-3.5 border-2 border-accent/15 rounded-lg -z-10 transition-all duration-300 group-hover:top-2.5 group-hover:left-2.5 group-hover:-right-2.5 group-hover:-bottom-2.5"></div>
+      <div class="absolute top-3.5 left-3.5 -right-3.5 -bottom-3.5 border-2 border-gray-200 dark:border-mint/15 rounded-lg -z-10 transition-all duration-300 group-hover:top-2.5 group-hover:left-2.5 group-hover:-right-2.5 group-hover:-bottom-2.5"></div>
     </div>
   </div>
 </section>

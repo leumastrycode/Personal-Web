@@ -30,59 +30,51 @@ export default function Hero() {
   }, [displayed, isDeleting, roleIdx]);
 
   return (
-    <section id="hero" className="relative min-h-screen flex items-center px-16 overflow-hidden bg-white dark:bg-[#0a0a0a]">
+    <section id="hero" className="relative min-h-screen flex items-center px-16 overflow-hidden">
 
-      {/* Grid background */}
-      <div
-        className="absolute inset-0 z-0"
+      {/* Subtle grid */}
+      <div className="absolute inset-0 z-0"
         style={{
           backgroundImage: `
-            linear-gradient(rgba(0,0,0,0.04) 1px, transparent 1px),
-            linear-gradient(90deg, rgba(0,0,0,0.04) 1px, transparent 1px)
+            linear-gradient(rgba(100,255,218,0.04) 1px, transparent 1px),
+            linear-gradient(90deg, rgba(100,255,218,0.04) 1px, transparent 1px)
           `,
           backgroundSize: '64px 64px',
         }}
       />
 
       {/* Glow orb */}
-      <div className="absolute top-1/4 left-2/3 w-[500px] h-[500px] pointer-events-none z-0
-                      opacity-40 dark:opacity-100"
-        style={{ background: 'radial-gradient(circle, rgba(100,255,218,0.05) 0%, transparent 70%)' }}
+      <div className="absolute top-1/4 left-2/3 w-[500px] h-[500px] pointer-events-none z-0"
+        style={{ background: 'radial-gradient(circle, rgba(100,255,218,0.06) 0%, transparent 70%)' }}
       />
 
       <div className="relative z-10 max-w-4xl">
-        <p className="font-mono text-accent text-sm mb-6 dark:text-gray-400">Hi, my name is</p>
+        <p className="font-mono text-mint text-sm mb-6">Hi, my name is</p>
 
-        <h1 className="font-display font-black text-primary dark:text-white leading-none tracking-tight mb-2"
+        <h1 className="font-display font-black text-gray-900 dark:text-slate-100 leading-none tracking-tight mb-2"
           style={{ fontSize: 'clamp(2.8rem, 8vw, 6rem)' }}>
           Samuel.
         </h1>
 
-        <h2 className="font-display font-bold text-muted dark:text-gray-400 leading-none tracking-tight mb-8"
+        <h2 className="font-display font-bold text-gray-500 dark:text-slate-500 leading-none tracking-tight mb-8"
           style={{ fontSize: 'clamp(1.8rem, 5.5vw, 4rem)', minHeight: '1.3em' }}>
           I'm a{' '}
-          <span className="text-accent">
+          <span className="text-mint">
             {displayed}
-            <span className="inline-block w-[3px] h-[0.8em] bg-accent ml-[2px] align-middle animate-[blink_1s_step-end_infinite]" />
+            <span className="inline-block w-[3px] h-[0.8em] bg-mint ml-[2px] align-middle animate-[blink_1s_step-end_infinite]" />
           </span>
         </h2>
 
-        <p className="font-body text-muted dark:text-gray-400 text-lg leading-relaxed max-w-md mb-12">
+        <p className="font-body text-gray-500 dark:text-slate-400 text-lg leading-relaxed max-w-md mb-12">
           I build fast, accessible, and pixel-perfect web experiences.
           Focused on creating human-centered products that live on the internet.
         </p>
 
         <div className="flex gap-5 flex-wrap">
-          <a
-            href="#projects"
-            className="font-mono text-sm text-accent border border-accent dark:text-gray-400 px-8 py-4 rounded hover:bg-accent/10 transition-colors"
-          >
+          <a href="#projects" className="font-mono text-sm text-mint border border-mint px-8 py-4 rounded hover:bg-mint/10 transition-colors">
             View My Work →
           </a>
-          <a
-            href="#contact"
-            className="font-mono text-sm text-muted dark:text-gray-400 px-6 py-4 hover:text-accent transition-colors"
-          >
+          <a href="#contact" className="font-mono text-sm text-gray-500 dark:text-slate-400 px-6 py-4 hover:text-mint transition-colors">
             Get In Touch
           </a>
         </div>
