@@ -6,26 +6,28 @@ const bio = [
 ];
 ---
 
-<section id="about" class="px-16 py-24">
-  <h2 class="font-display font-bold text-gray-900 dark:text-slate-100 text-3xl flex items-center gap-4 mb-12">
-    <span class="font-mono text-mint font-normal text-base">01.</span>
+<section id="about" class="px-6 sm:px-10 md:px-16 py-16 sm:py-24">
+  <h2 class="font-display font-bold text-gray-900 dark:text-slate-100 text-2xl sm:text-3xl flex items-center gap-4 mb-10 sm:mb-12">
+    <span class="font-mono text-mint font-normal text-sm sm:text-base">01.</span>
     About Me
     <span class="flex-1 h-px bg-gray-200 dark:bg-mint/10"></span>
   </h2>
 
-  <div class="grid grid-cols-[3fr_2fr] gap-20 items-center max-w-5xl">
+  <div class="flex flex-col sm:grid sm:grid-cols-[3fr_2fr] gap-10 sm:gap-20 items-center max-w-5xl">
     <div class="flex flex-col gap-5">
       {bio.map(p => (
-        <p class="font-body text-gray-500 dark:text-slate-400 text-lg leading-relaxed" set:html={p} />
+        <p class="font-body text-gray-500 dark:text-slate-400 text-base sm:text-lg leading-relaxed" set:html={p} />
       ))}
     </div>
 
-    <div class="relative w-[260px] h-[300px] mx-auto group">
+    <!-- Foto: hidden di bawah sm, muncul di sm ke atas -->
+    <div class="hidden sm:block relative w-[220px] sm:w-[260px] h-[260px] sm:h-[300px] mx-auto group">
       <div class="w-full h-full bg-gray-100 dark:bg-zinc-900 border-2 border-gray-200 dark:border-mint/20 rounded-lg flex items-center justify-center overflow-hidden">
-        <img 
-        src="/src/assets/foto-profile2.jpeg" 
-        alt="Samuel"
-        class="w-full h-full object-cover">
+        <img
+          src="/src/assets/foto-profile2.jpeg"
+          alt="Samuel"
+          class="w-full h-full object-cover"
+        />
       </div>
       <div class="absolute top-3.5 left-3.5 -right-3.5 -bottom-3.5 border-2 border-gray-200 dark:border-mint/15 rounded-lg -z-10 transition-all duration-300 group-hover:top-2.5 group-hover:left-2.5 group-hover:-right-2.5 group-hover:-bottom-2.5"></div>
     </div>
